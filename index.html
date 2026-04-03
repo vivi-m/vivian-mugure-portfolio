@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Vivian Mugure — Web Developer specializing in building responsive, modern websites for businesses and individuals. Based in Nairobi, Kenya.">
+    <meta name="keywords" content="Vivian Mugure, Web Developer, Portfolio, HTML, CSS, JavaScript, Kenya, Responsive Design">
+    <meta name="author" content="Vivian Mugure">
+    <meta property="og:title" content="Vivian Mugure — Web Developer Portfolio">
+    <meta property="og:description" content="Building modern, responsive, and user-focused digital experiences.">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#6c63ff">
+    <title>Vivian Mugure — Web Developer Portfolio</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Preload critical image -->
+    <link rel="preload" as="image" href="assets/images/profile.png">
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" aria-label="Vivian Mugure Home">
+                <span class="logo-text">VM</span>
+            </a>
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li role="none"><a href="#hero" class="nav-link active" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#education" class="nav-link" role="menuitem">Education</a></li>
+                <li role="none"><a href="#services" class="nav-link" role="menuitem">Services</a></li>
+                <li role="none"><a href="#testimonials" class="nav-link" role="menuitem">Testimonials</a></li>
+                <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+                    <i data-lucide="sun" class="theme-icon sun-icon"></i>
+                    <i data-lucide="moon" class="theme-icon moon-icon"></i>
+                </button>
+                <a href="#contact" class="nav-cta">Hire Me</a>
+                <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-mesh"></div>
+            <div class="hero-particles" id="heroParticles"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge animate-on-scroll">
+                    <span class="badge-dot"></span>
+                    Available for Freelance Work
+                </div>
+                <h1 class="hero-title animate-on-scroll">
+                    Hi, I'm <span class="highlight">Vivian Mugure</span>
+                </h1>
+                <p class="hero-subtitle animate-on-scroll">Web Developer</p>
+                <p class="hero-description animate-on-scroll">
+                    I am a web developer specializing in building responsive and modern websites 
+                    for businesses and individuals.
+                </p>
+                <div class="hero-buttons animate-on-scroll">
+                    <a href="#projects" class="btn btn-primary">
+                        <i data-lucide="briefcase"></i>
+                        View My Work
+                    </a>
+                    <a href="mailto:vivianmugure36@gmail.com" class="btn btn-outline">
+                        Email Me
+                    </a>
+                </div>
+                <div class="hero-stats animate-on-scroll">
+                    <div class="stat">
+                        <span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="1">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual animate-on-scroll">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-border"></div>
+                    <img src="assets/images/profile.png" alt="Vivian Mugure — Web Developer" class="hero-image" width="380" height="380" loading="eager" fetchpriority="high">
+                    <div class="hero-image-glow"></div>
+                </div>
+                <div class="floating-badge badge-html">
+                    <span>&lt;/&gt;</span> HTML
+                </div>
+                <div class="floating-badge badge-css">
+                    <span>{}</span> CSS
+                </div>
+                <div class="floating-badge badge-js">
+                    <span>JS</span> JavaScript
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+            <i data-lucide="chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section class="section about" id="about">
+        <div class="section-bg-accent"></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Get To Know Me</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-col animate-on-scroll">
+                    <div class="about-image-wrapper">
+                        <img src="assets/images/profile.png" alt="Vivian Mugure professional photo" class="about-image" width="500" height="500" loading="lazy">
+                        <div class="about-image-accent"></div>
+                    </div>
+                </div>
+                <div class="about-text-col animate-on-scroll">
+                    <h3 class="about-heading">A passionate web developer turning ideas into reality</h3>
+                    <p class="about-description">
+                        I'm Vivian Mugure, a web developer based in <strong>Nairobi, Kenya</strong>. 
+                        With a strong academic background in <strong>Economics and Finance with IT</strong> from 
+                        Maseno University, I bring a unique blend of analytical thinking and creative 
+                        problem-solving to every project I work on.
+                    </p>
+                    <p class="about-description">
+                        My journey into tech started with a deep curiosity about how websites work, and it 
+                        quickly grew into a full passion. Today, I specialize in building <strong>modern, 
+                        responsive, and user-focused websites</strong> that help businesses and individuals 
+                        establish a strong online presence.
+                    </p>
+                    <p class="about-description">
+                        I believe that great web development is about more than just code — it's about 
+                        understanding the user's needs and delivering experiences that are both beautiful 
+                        and functional. Whether it's a business landing page, a personal brand site, or a 
+                        full web application, I bring the same level of dedication and attention to detail.
+                    </p>
+                    <div class="about-info-grid">
+                        <div class="about-info-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>Nairobi, Kenya</span>
+                        </div>
+                        <div class="about-info-item">
+                            <i data-lucide="mail"></i>
+                            <a href="mailto:vivianmugure36@gmail.com" class="email-link">vivianmugure36@gmail.com</a>
+                        </div>
+                        <div class="about-info-item">
+                            <i data-lucide="phone"></i>
+                            <span>+254 112341176</span>
+                        </div>
+                        <div class="about-info-item">
+                            <i data-lucide="graduation-cap"></i>
+                            <span>B.S. Economics & Finance with IT</span>
+                        </div>
+                    </div>
+                    <div class="about-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i data-lucide="send"></i>
+                            Let's Talk
+                        </a>
+                        <a href="#" class="btn btn-outline" id="downloadCV">
+                            <i data-lucide="download"></i>
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SKILLS SECTION ========== -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">My Skills</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">A comprehensive toolkit for modern web development and digital transformation.</p>
+            </div>
+            <div class="skills-grid">
+                <!-- Frontend Development -->
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <i data-lucide="layout"></i>
+                        </div>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-name">HTML5 (Semantic & Accessibility)</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-name">CSS3 (Flexbox & Grid)</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-name">JavaScript (ES6+ & JS DOM)</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-name">Responsive Web Design</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-name">UI/UX Design Principles</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies -->
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <i data-lucide="wrench"></i>
+                        </div>
+                        <h3>Tools & Technologies</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <div class="skill-tag">
+                            <i data-lucide="git-branch"></i>
+                            Git & GitHub
+                        </div>
+                        <div class="skill-tag">
+                            <i data-lucide="triangle"></i>
+                            Vercel
+                        </div>
+                        <div class="skill-tag">
+                            <i data-lucide="terminal"></i>
+                            VS Code
+                        </div>
+                        <div class="skill-tag">
+                            <i data-lucide="chrome"></i>
+                            Chrome DevTools
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Skills -->
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <i data-lucide="plus-circle"></i>
+                        </div>
+                        <h3>Additional Skills</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <div class="skill-tag">
+                            <i data-lucide="zap"></i>
+                            Performance Optimization
+                        </div>
+                        <div class="skill-tag">
+                            <i data-lucide="monitor"></i>
+                            Cross-browser Compatibility
+                        </div>
+                        <div class="skill-tag">
+                            <i data-lucide="search"></i>
+                            Basic SEO Principles
+                        </div>
+                        <div class="skill-tag">
+                            <i data-lucide="bug"></i>
+                            Debugging & Problem Solving
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EXPERIENCE SECTION ========== -->
+    <section class="section experience" id="experience">
+        <div class="section-bg-accent"></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Professional Highlights</span>
+                <h2 class="section-title">Work Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker">
+                        <i data-lucide="briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 — Present</span>
+                        <h3 class="timeline-title">Web Development Projects</h3>
+                        <p class="timeline-place">Freelance & Personal Initiatives</p>
+                        <div class="timeline-description">
+                            <ul class="exp-list">
+                                <li>Designed and developed responsive websites for different industries, focusing on modern aesthetics and UX.</li>
+                                <li>Built user-friendly interfaces with modern UI principles and clear information architecture.</li>
+                                <li>Deployed and managed live websites using Vercel, ensuring high availability and speed.</li>
+                                <li>Ensured mobile responsiveness and cross-device performance optimization for all digital products.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS SECTION ========== -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">My Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Here are some of the real-world projects I've built for clients and personal development.</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card animate-on-scroll" id="project-crystalpane">
+                    <div class="project-image-wrapper">
+                        <img src="assets/images/project-crystalpane.png" alt="CrystalPane Windows Website" class="project-image" width="400" height="220" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://crystalpane-windows.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-overlay-btn">
+                                <i data-lucide="external-link"></i>
+                                View Live
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">CrystalPane Windows</h3>
+                        <p class="project-description">A professional services platform for a glass installations firm, featuring modern UI principles and deployed via Vercel.</p>
+                        <a href="https://crystalpane-windows.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                            View Live Site
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card animate-on-scroll" id="project-glowup">
+                    <div class="project-image-wrapper">
+                        <img src="assets/images/project-glowup.png" alt="Glow Up With Vivian Website" class="project-image" width="400" height="220" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://glow-up-with-vivian.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-overlay-btn">
+                                <i data-lucide="external-link"></i>
+                                View Live
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">Glow Up With Vivian</h3>
+                        <p class="project-description">An optimized beauty landing page with a focus on mobile responsiveness and performance optimization.</p>
+                        <a href="https://glow-up-with-vivian.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                            View Live Site
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card animate-on-scroll" id="project-mindful">
+                    <div class="project-image-wrapper">
+                        <img src="assets/images/project-mindful.png" alt="Mindful Moments Website" class="project-image" width="400" height="220" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://mindful-moments-lac.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-overlay-btn">
+                                <i data-lucide="external-link"></i>
+                                View Live
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">Mindful Moments</h3>
+                        <p class="project-description">A wellness-driven website designed for accessibility and deployed with seamless CI/CD via Vercel.</p>
+                        <a href="https://mindful-moments-lac.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                            View Live Site
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EDUCATION SECTION ========== -->
+    <section class="section education" id="education">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title">Education</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Sept 2019 — Dec 2023</span>
+                        <h3 class="timeline-title">B.S. in Economics and Finance with IT</h3>
+                        <p class="timeline-place">Maseno University</p>
+                        <p class="timeline-description">Gained a strong foundation in economics, finance, and information technology. Developed analytical skills and a passion for web development during coursework and personal projects.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker">
+                        <i data-lucide="book-open"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jan 2014 — Nov 2018</span>
+                        <h3 class="timeline-title">Secondary Education</h3>
+                        <p class="timeline-place">St. Anthony Secondary School</p>
+                        <p class="timeline-description">Completed Kenya Certificate of Secondary Education (KCSE). Developed strong academic discipline and leadership skills.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker">
+                        <i data-lucide="school"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jan 2006 — Nov 2013</span>
+                        <h3 class="timeline-title">Primary Education</h3>
+                        <p class="timeline-place">Peter Kibukosya Primary School</p>
+                        <p class="timeline-description">Completed Kenya Certificate of Primary Education (KCPE). Built a strong educational foundation and early curiosity for technology.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">What I Offer</span>
+                <h2 class="section-title">My Services</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3 class="service-title">Website Design</h3>
+                    <p class="service-description">I create stunning, user-centered website designs that capture your brand identity and engage your audience. Every design is crafted with attention to aesthetics, usability, and modern trends.</p>
+                    <div class="service-features">
+                        <span><i data-lucide="check"></i> Custom Layouts</span>
+                        <span><i data-lucide="check"></i> Responsive Design</span>
+                        <span><i data-lucide="check"></i> UI/UX Best Practices</span>
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <h3 class="service-title">Website Development</h3>
+                    <p class="service-description">I build clean, fast, and fully functional websites using modern technologies. From landing pages to multi-page sites, your project is built with clean code and best practices.</p>
+                    <div class="service-features">
+                        <span><i data-lucide="check"></i> Clean Code</span>
+                        <span><i data-lucide="check"></i> Cross-Browser Support</span>
+                        <span><i data-lucide="check"></i> Performance Optimized</span>
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i data-lucide="rocket"></i>
+                    </div>
+                    <h3 class="service-title">Website Deployment</h3>
+                    <p class="service-description">I handle seamless deployment of your website to the web using platforms like Vercel and GitHub Pages. Your site goes live quickly with proper configuration and domain setup.</p>
+                    <div class="service-features">
+                        <span><i data-lucide="check"></i> Vercel Deployment</span>
+                        <span><i data-lucide="check"></i> Domain Setup</span>
+                        <span><i data-lucide="check"></i> SSL & Speed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS SECTION ========== -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Client Feedback</span>
+                <h2 class="section-title">Testimonials</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "Vivian built an amazing website for my glass business. The design was clean, professional, and exactly what I needed. She was responsive, creative, and delivered ahead of schedule."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">DK</div>
+                        <div>
+                            <p class="testimonial-name">Daniel Kariuki</p>
+                            <p class="testimonial-role">Founder, CrystalPane Windows</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "Working with Vivian was a fantastic experience. She understood my vision for the wellness platform perfectly and created something truly beautiful. Highly recommend her services!"
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AN</div>
+                        <div>
+                            <p class="testimonial-name">Amara Njoroge</p>
+                            <p class="testimonial-role">Wellness Coach</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "Vivian is incredibly talented. She took our ideas and turned them into a stunning website that our clients love. Her attention to detail and dedication to quality really sets her apart."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SO</div>
+                        <div>
+                            <p class="testimonial-name">Sarah Odhiambo</p>
+                            <p class="testimonial-role">Small Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Have a project in mind? Let's work together to bring your ideas to life.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info-col animate-on-scroll">
+                    <div class="contact-info-card">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+254112341176">+254 112 341 176</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:vivianmugure36@gmail.com" class="email-text">vivianmugure36@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Nairobi, Kenya</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <h4>Follow Me</h4>
+                        <div class="social-links-v2">
+                            <a href="https://www.linkedin.com/in/vivian-v-mugure/" target="_blank" rel="noopener noreferrer" class="social-link-branded linkedin" aria-label="LinkedIn">
+                                <i data-lucide="linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="mailto:vivianmugure36@gmail.com" class="btn btn-primary email-btn">Email Me</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-col animate-on-scroll">
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <!-- Honeypot anti-spam field — hidden from real users -->
+                        <div class="form-hp" aria-hidden="true" tabindex="-1">
+                            <label for="website">Website</label>
+                            <input type="text" id="website" name="website" autocomplete="off" tabindex="-1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Your Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required maxlength="100" autocomplete="name" aria-required="true">
+                            <span class="field-error" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required maxlength="150" autocomplete="email" aria-required="true">
+                            <span class="field-error" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" maxlength="200" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required maxlength="2000" aria-required="true"></textarea>
+                            <span class="field-error" id="messageError"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            <i data-lucide="send"></i>
+                            Send Message
+                        </button>
+                        <div class="form-status" id="formStatus" role="alert"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#hero" class="footer-logo">
+                        <span class="logo-text">VM</span>
+                    </a>
+                    <p class="footer-tagline">Building modern, responsive, and user-focused digital experiences.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Website Design</a></li>
+                        <li><a href="#services">Website Development</a></li>
+                        <li><a href="#services">Website Deployment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>
+                            <i data-lucide="mail"></i>
+                            <a href="mailto:vivianmugure36@gmail.com">vivianmugure36@gmail.com</a>
+                        </li>
+                        <li>
+                            <i data-lucide="phone"></i>
+                            <a href="tel:+254112341176">+254 112 341 176</a>
+                        </li>
+                        <li>
+                            <i data-lucide="map-pin"></i>
+                            <span>Nairobi, Kenya</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vivian Mugure. All rights reserved.</p>
+                <p>Designed & Built with <span class="heart">&hearts;</span> by Vivian Mugure</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
